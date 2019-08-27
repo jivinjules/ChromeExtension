@@ -11,8 +11,8 @@ body {
     overflow: hidden; 
 }
 
-#PlayVid {
-    font-size: 30px;
+#PlayVid, #currentBlock, #block {
+    font-size: 25px;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     background-color: #f2a900;
@@ -26,7 +26,7 @@ body {
     color: white;
     border-radius: 5px;
     font-family: 'Ubuntu', sans-serif;
-    padding: 15px;
+    padding: 10px;
     font-size: 15px;
     margin: 0 auto;
     border: none;
@@ -44,9 +44,9 @@ body {
     float: right;
     border: none;
     cursor: pointer;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #copy {
