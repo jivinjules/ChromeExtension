@@ -34,12 +34,27 @@ body {
     cursor: pointer;
 }
 
+#close {
+    background-color: #4d4d4e;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px;
+    font-size: 15px;
+    float: right;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 #copy {
     margin-top: 15px;
 }
 
 #tippin-button:hover,
-#copy:hover {
+#copy:hover, #close:hover {
     opacity: .7
 }
 
@@ -58,7 +73,7 @@ body {
     color: #FFFFFF;
 }
 
-.button-filled:hover, #copy:hover {
+.button-filled:hover, #copy:hover, #close:hover {
     background: #606060;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0, 0);
     position: relative;
@@ -122,3 +137,11 @@ body {
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 } 
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:white;
+  }
