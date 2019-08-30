@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    width: 560px;
+    width: 400px;
     margin: 00px;
     background-color: #f2a900;
     border-radius: 2px;
@@ -32,6 +32,12 @@ body {
     border: none;
     width: 200px;
     cursor: pointer;
+}
+
+#cat-logo {
+    width: 145px;
+    position: relative;
+  margin: 0 auto;
 }
 
 #close {

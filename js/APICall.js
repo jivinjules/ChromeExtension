@@ -22,7 +22,7 @@ var updateHTML = function () {
 
 var checkBlocks = setInterval(function () {
 
-	var HTMLString = '<iframe width="560" height="330" src="https://www.youtube.com/embed/IQ8kUWOkqT0?autoplay=1&rel=0&end=6&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+	var HTMLString = '<iframe width="400" height="330" src="https://www.youtube.com/embed/IQ8kUWOkqT0?autoplay=1&rel=0&end=6&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
 	xhttp.open("GET", "https://chain.api.btc.com/v3/block/latest", true)
 	xhttp.send();
