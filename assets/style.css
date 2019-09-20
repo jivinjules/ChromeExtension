@@ -131,6 +131,8 @@ body {
     margin-top: 00px;
     border-radius: 0.25rem;
     background-color: lightgray;
+    position: relative;
+    z-index: 1;
 }
 
 .close-button:hover {
@@ -150,4 +152,16 @@ body {
     bottom: 0;
     width: 100%;
     background-color:white;
+  }
+
+  #footer {
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:white;
+    z-index: -1;
   }

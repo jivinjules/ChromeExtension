@@ -1,14 +1,16 @@
+// "default_icon": "BitcoinCatJumpLogoInactive.png",   
 //var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var xhttp = new XMLHttpRequest();
 var i = 0;
 var currBlock = 0;
 
 document.addEventListener("DOMContentLoaded", function (event) {
+	chrome.browserAction.setIcon({path: {'38':'BitcoinCatJumpLogo2.png'}});
+	event.preventDefault()
 	updateHTML()
 })
 
 var updateHTML = function () {
-
 	xhttp.open("GET", "https://chain.api.btc.com/v3/block/latest", true)
 	xhttp.send();
 	xhttp.onload = function () {
