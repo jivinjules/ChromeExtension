@@ -16,7 +16,7 @@
 
 <body>
 	<p id='currentBlock'></p>
-	
+
 	<p id="PlayVid">Waiting for next bitcoin block...</br>
 		The cat is prepared to launch!</p>
 
@@ -29,7 +29,17 @@
 	</div>
 	<div style="height:16px;font-size:16px;">&nbsp;</div>
 	<div style="text-align:center;" id="cat-logo"><img src="BitcoinCatJumpLogoPopUp.png"> </div>
-	<div class="footer"><p id='footer'></p>
+	<div class="footer">
+
+		<p id='footer'></p>
+		<div class="tooltip">
+			<span class="tooltiptext"><strong>Options:</strong> </br> 1.) Keep this extension window open and watch the cat jump here. </br> 2.) Toggle right and click the X, and this window will close, but BTC Cat Jump will continue to run in the background </br> 3.) To disable BTC Cat Jump, click the X without toggling.</span>
+			<label class="switch">
+				<input type="checkbox">
+				<span class="slider round"></span>
+			</label>
+		</div>
+
 		<button class='standard-btn' id='close'>X</button>
 	</div>
 

@@ -3,15 +3,15 @@ html {
 }
 
 body {
-    width: 400px;
-    margin: 00px;
+ 
     background-color: #f2a900;
-    border-radius: 2px;
-    height: 590px;
     overflow: hidden; 
 }
-
-#PlayVid, #currentBlock, #block {
+iframe {
+    margin: auto;
+    display: block;
+}
+ #currentBlock, #block {
     font-size: 25px;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
@@ -128,7 +128,7 @@ body {
     text-align: center;
     cursor: pointer;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 00px;
     border-radius: 0.25rem;
     background-color: lightgray;
     position: relative;
@@ -164,116 +164,4 @@ body {
     width: 100%;
     background-color:white;
     z-index: -1;
-  }
-
-  /* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-top: 20px;
-    margin-left: 10px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #f2a900;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #f2a900;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-
-  /* Tooltip container */
-.tooltip {
-    position: relative;
-    display: inline-block;  
-  }
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 5px 5px 5px 5px;
-    border-radius: 6px;
-    
-    /* Position the tooltip text */
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -20px;
-    text-align: left;
-  
-    /* Fade in tooltip */
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  /* Tooltip arrow */
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
   }

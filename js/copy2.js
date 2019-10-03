@@ -9,29 +9,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         }, 4000)
     })
-    var close = document.getElementById('close')
-    var input = document.querySelector('input[type="checkbox"]');
-    close.addEventListener('click', function (event) {
-        event.preventDefault()
-        if (input.checked) {            
-            setTimeout(function () {
-                window.close()
-            }, 500)
-        } else if (!input.checked) {
-            chrome.browserAction.setIcon({ path: { '38': 'BitcoinCatJumpLogo1.png' } });
-            setTimeout(function () {
-                window.close()
-            }, 500)
-        }
-    })
 });
-
 
 function copyTextToClipboard(text) {
     navigator.clipboard.writeText(text).then(
-        function () {
+        function () {        
             console.log('Lightning connection code copied')
         })
 
-
+        setTimeout(function () {
+            window.close()
+        }, 10000)
 }

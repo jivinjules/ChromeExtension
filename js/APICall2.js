@@ -1,58 +1,49 @@
-//var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-//var xhttp = new XMLHttpRequest();
-//var i = 0;
-//var currBlock = 0;
+var xhttp = new XMLHttpRequest();
+var i = 0;
+var currBlock = 0;
 
-//document.addEventListener("DOMContentLoaded", function (event) {
-//	updateHTML()
-//})
+document.addEventListener("DOMContentLoaded", function (event) {
+	updateHTML()
+})
 
-//var updateHTML = function () {
+var updateHTML = function () {
 
-//	xhttp.open("GET", "https://chain.api.btc.com/v3/block/latest", true)
-//	xhttp.send();
-//	xhttp.onload = function () {
-//		let x = JSON.parse(this.responseText)
-//		let y = x.data.height
-//		let z = parseInt(y)
-//		var currentBlockText = document.getElementById('currentBlock')
-//		currentBlockText.innerHTML = "Current Block: " + z
-//	}
-//}
+	xhttp.open("GET", "https://chain.api.btc.com/v3/block/latest", true)
+	xhttp.send();
+	xhttp.onload = function () {
+		let x = JSON.parse(this.responseText)
+		let y = x.data.height
+		let z = parseInt(y)
+		console.log(z)
+	}
+}
 
-//var checkBlocks = setInterval(function () {
+var checkBlocks = setInterval(function () {
 
-//	var HTMLString = '<iframe width="400" height="330" src="https://www.youtube.com/embed/IQ8kUWOkqT0?autoplay=1&rel=0&end=6&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+	var HTMLString = '<iframe width="400" height="330" src="https://www.youtube.com/embed/IQ8kUWOkqT0?autoplay=1&rel=0&end=6&modestbranding=1&showinfo=0&controls=0&iv_load_policy=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
-//	xhttp.open("GET", "https://chain.api.btc.com/v3/block/latest", true)
-//	xhttp.send();
-//	xhttp.onload = function () {
-//		let x = JSON.parse(this.responseText)
-//		let y = x.data.height
-//		let z = parseInt(y)
-//		var currentBlockText = document.getElementById('currentBlock')
-//		currentBlockText.innerHTML = "Current Block: " + z
-//		if ((i != 0) && (currBlock != z)) {
-//			document.getElementById("PlayVid").innerHTML = HTMLString;
-//			setTimeout(function () {
-//				window.close()
-//			}, 10000)
-//		}
-//		currBlock = z
-//		i++;
-//	}
-//}, 5000);
-var toggle = false;
-chrome.browserAction.onClicked.addListener(function(tab) {
-  toggle = !toggle;
-  if(toggle){
-    chrome.browserAction.setIcon({path: "BitcoinCatJumpLogo.png", tabId:tab.id});
-    chrome.tabs.executeScript(tab.id, {file:"popup.html"});
-  }
-  else{
-    chrome.browserAction.setIcon({path: "BitcoinCatJumpLogoInactive.png", tabId:tab.id});
-    chrome.tabs.executeScript(tab.id, {code:"alert()"});
-  }
-});
+	xhttp.open("GET", "https://chain.api.btc.com/v3/block/latest", true)
+	xhttp.send();
+	xhttp.onload = function () {
+		let x = JSON.parse(this.responseText)
+		let y = x.data.height
+		let z = parseInt(y)
+		if ((i != 0) && (currBlock != z)) {
+			console.log("CAT SHOULD JUMP NOW!!!")
+			// window.open("backgroundPopup.html", "Bitcoin Cat Jumps Here");
+			openWindow()
+			setInterval(function () {
+				closeWindow()}, 10000)
+		}
+		currBlock = z
+		i++;
+	}
+}, 5000);
 
+function openWindow() {
+	catWindow = window.open("backgroundPopup.html", "Bitcoin Cat Jumps Here");
+}
 
+function closeWindow() {
+	catWindow.close()
+}
