@@ -1,4 +1,39 @@
-var xhttp = new XMLHttpRequest();
+chrome.tabs.query({'active':true, 'windowId': chrome.windows.WINDOW_ID_CURRENT}
+,
+	function(tabs){
+		console.log(tabs[0].url);
+	}
+);
+function getURLParameter(sParam){
+	var sPageURL = window.location.search.substring(1);
+	console.log(sPageURL);
+	var sURLVariables = sPageURL.split('&');
+
+	for (var i = 0; i < sURLVariables.length; i++){
+			var sParameterName = sURLVariables[i].split('=');
+				if (sParameterName[0] == sParam) {
+					return sParameterName[1];
+				}
+	}
+}
+
+var views = chrome.extension.getViews({ type: "popup" });
+var popupStatus;
+
+if (views && views.length){
+	popupStatus = true
+} else {
+	popupStatus = false
+}
+console.log(popupStatus);
+
+var isPopup;
+isPopup = getURLParameter('popup') === 'true';
+console.log(isPopup);
+console.log(CatState);
+
+if ((CatState == "RunningMode")&&(isPopup != true)) {
+var xhttp = new XMLHttpRequest(); 
 var i = 0;
 var currBlock = 0;
 
@@ -51,4 +86,5 @@ function openWindow() {
 
 function closeWindow() {
 	catWindow.close()
+}
 }

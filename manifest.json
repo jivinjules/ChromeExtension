@@ -1,17 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "Jump",
-  "description": "Bitcoin Cat Jump",
+  "name": "Bitcoin Cat Jump",
+  "description": "Every time a bitcoin block is mined, a cat will get its jumps.",
   "version": "1.0",
-  "author": "TheRandomOne",
+  "author": "HashedEntropy",
   "browser_action": {
     "default_icon": "BitcoinCatJumpLogo1.png",    
-    "default_popup": "popup.html",
     "default_title": "Bitcoin Cat Jump"
   },
-  "background": {
+ "background": {
     "scripts": [
-      "js/APICall2.js"
+      "js/Background.js"
     ],
     "persistent": false
   },
